@@ -6,10 +6,6 @@ import Card from "../card/card";
 
 const Home = () => {
     const dispatch = useDispatch();
-    useEffect(() => {
-        dispatch(getCountries());
-    }, []);
-
     const countriesCopy = useSelector((state) => state.countriesCopy);
 
     const { items, handlerNext, handlerPrev, handlerOrderAlpha, handlerOrderPop } = usePaginated(countriesCopy);
