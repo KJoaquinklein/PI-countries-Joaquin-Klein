@@ -6,13 +6,13 @@ const getCountriesByName = async (req, res) => {
     try {
         const findeByName = await Country.findAll({
             where: {
-                nombre: {
-                    [Op.iLike]: name,
+                name: {
+                    [Op.iLike]: `%${name}%`,
                 },
             },
         });
-        if (findeByName) {
-            return res.status(404).send(`No se ha encontrado el país ${name}`);
+        if (!findeByName) {
+            return res.status(404).send(`Country not found: ${name}`);
         }
         res.status(200).json(findeByName);
     } catch (error) {

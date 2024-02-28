@@ -32,13 +32,13 @@ const createCountyInTable = async (country) => {
     try {
         const newCountry = await Country.create({
             id: country.cca3,
-            nombre: country.name.common,
-            imagen: country.flags.svg,
-            continente: country.continents,
+            name: country.name.common,
+            img: country.flags.svg,
+            continent: country.continents,
             capital: country.capital,
             subregion: country.subregion,
             area: country.area,
-            poblacion: country.population,
+            population: country.population,
         });
         return newCountry;
     } catch (error) {

@@ -8,15 +8,15 @@ module.exports = (sequelize) => {
             allowNull: false,
             unique: true,
         },
-        nombre: {
+        name: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        imagen: {
+        img: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        continente: {
+        continent: {
             type: DataTypes.JSON,
             allowNull: false,
         },
@@ -32,7 +32,7 @@ module.exports = (sequelize) => {
             type: DataTypes.FLOAT,
             allowNull: true,
         },
-        poblacion: {
+        population: {
             type: DataTypes.INTEGER,
             allowNull: false,
         },

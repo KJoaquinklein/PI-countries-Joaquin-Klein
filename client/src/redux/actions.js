@@ -10,18 +10,24 @@ export const getCountries = () => {
     };
 };
 
-//! probar hacer sin redux
-// export const getCountryByName = (name) => {
-//     return async (dispatch) => {
-//         const result = await axios.get(
-//             `http://localhost:3001/countries/name?name=${name}`
-//         );
-//         return dispatch({
-//             type: "GET_BY_NAME",
-//             payload: result.data,
-//         });
-//     };
-// };
+export const getFilterContinent = (continent) => {
+    return {
+        type: "GET_FILTER_CONTINENT",
+        payload: continent,
+    };
+};
+
+export const getCountryByName = (name) => {
+    return async (dispatch) => {
+        const result = await axios.get(
+            `http://localhost:3001/countries/name?name=${name}`
+        );
+        return dispatch({
+            type: "GET_COUNTRY_BY_NAME",
+            payload: result.data,
+        });
+    };
+};
 
 //! probar hacer sin redux
 // export const getCountryByID = (id) => {

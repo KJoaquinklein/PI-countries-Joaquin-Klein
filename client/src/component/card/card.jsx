@@ -1,16 +1,20 @@
+import { Link } from "react-router-dom";
+
 const Card = (props) => {
-    const { nombre, continente, imagen } = props.country;
+    const { name, continent, population, img, id } = props.country;
 
     return (
         <div>
             <img
-                src={imagen}
-                alt={`Bandera de ${nombre}`}
-                title={`Bandera de ${nombre}`}
+                src={img}
+                alt={`Bandera de ${name}`}
+                title={`Bandera de ${name}`}
                 width="20px"
             />
-            <p>{nombre}</p>
-            {/* <p>{continente}</p> */}
+            <Link to={`/detail/${id}`}>{name}</Link>
+            <p>
+                {continent} | {population}
+            </p>
         </div>
     );
 };

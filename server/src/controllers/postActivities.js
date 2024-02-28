@@ -1,23 +1,23 @@
 const { Activity } = require("../db");
 
 const postActivities = async (req, res) => {
-    const { nombre, dificultad, duracion, temporada, paisesId } = req.body;
+    const { name, difficulty, duration, season, countryId } = req.body;
     try {
-        if (!Array.isArray(paisesId)) {
+        if (!Array.isArray(countryId)) {
             return res
                 .status(404)
                 .send(
-                    "Error en la informacion: paisesId debe ser un arreglo de paises"
+                    "Information error: countriesId must be an array of countries"
                 );
         }
         const newActivity = await Activity.create({
-            nombre,
-            dificultad,
-            duracion,
-            temporada,
+            name,
+            difficulty,
+            duration,
+            season,
         });
-        newActivity.addCountries(paisesId);
-        res.status(200).send("La actividad se creo correctamente");
+        newActivity.addCountries(countryId);
+        res.status(200).send("The activity was created correctly");
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
