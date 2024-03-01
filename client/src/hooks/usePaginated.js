@@ -1,65 +1,21 @@
 import { useState } from "react";
+import useSorted from "./useSorted";
 
 const usePaginated = (countries) => {
     const itemsPage = 10;
     const [pageNum, setPageNum] = useState(0);
-    const [orderAlpha, setOrderAlpha] = useState(false);
-    const [orderPop, setOrderPop] = useState(0);
 
     const startIndex = pageNum * itemsPage;
     const endIndex = startIndex + itemsPage;
 
-    //! -- ORDENAMIENTOS ↓ -------------------------------------
-
-    const sortAlphaCounties = () => {
-        if (orderAlpha) {
-            return [...countries].sort((a, b) => {
-                if (a.name < b.name) {
-                    return -1;
-                }
-                if (a.name > b.name) {
-                    return 1;
-                }
-                return 0;
-            });
-        } else {
-            return [...countries];
-        }
-    };
-
-    const sortPopCounties = () => {
-        if (orderPop === 1) {
-            return [...countries].sort((a, b) => {
-                if (a.population < b.population) {
-                    return -1;
-                }
-                if (a.population > b.population) {
-                    return 1;
-                }
-                return 0;
-            });
-        } else if (orderPop === 2) {
-            return [...countries].sort((a, b) => {
-                if (a.population > b.population) {
-                    return -1;
-                }
-                if (a.population < b.population) {
-                    return 1;
-                }
-                return 0;
-            });
-        } else {
-            return [...countries];
-        }
-    };
+    const { orderAlpha, setOrderAlpha, orderPop, setOrderPop, sortAlphaCounties, sortPopCounties } =
+        useSorted(countries);
 
     let orderCountries = [...countries];
     if (orderAlpha) orderCountries = sortAlphaCounties();
     if (orderPop) orderCountries = sortPopCounties();
 
     const items = orderCountries.slice(startIndex, endIndex);
-
-    //! -- ORDENAMIENTOS ↑ -------------------------------------
 
     //! -- HANDLERS ↓ ------------------------------------------
 

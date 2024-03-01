@@ -1,6 +1,12 @@
+//*-- HOOKS ----------------------------------------------
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
+
+//*-- COMPONENTS ----------------------------------------
+import ActivityCards from "../activityCard/activityCard";
+
+//*-- OTROS ---------------------------------------------
 import axios from "axios";
 
 const Detail = () => {
@@ -38,22 +44,7 @@ const Detail = () => {
                     <div>
                         <img src={country.img} alt={`bandera de ${country.name}`} height="300px" />
                     </div>
-                    <div>
-                        {activities.map((act) =>
-                            act.Countries.map((actCoun) =>
-                                actCoun.id === id ? (
-                                    <div key={act.id}>
-                                        <hr />
-                                        <p>{act.name}</p>
-                                        <p>Dificultad: {act.difficulty}</p>
-                                        <p>Duración: {act.duration}</p>
-                                        <p>Temporada: {act.season}</p>
-                                        <hr />
-                                    </div>
-                                ) : null
-                            )
-                        )}
-                    </div>
+                    <ActivityCards activities={activities} id={id} />
                 </div>
             ) : (
                 <p>No se encontró el país solicitado :(</p>

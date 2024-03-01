@@ -1,77 +1,36 @@
-import { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { getFilterContinent, getCountryByName, getFilterActivities } from "../../redux/actions";
+//*-- HOOKS -----------------------------------------
+import { useSelector } from "react-redux";
 import usePaginated from "../../hooks/usePaginated";
+import useFilter from "../../hooks/useFilter";
+import useSearch from "../../hooks/useSearch";
+
+//*-- COMPONENTS ------------------------------------
 import Card from "../card/card";
+import Filters from "../filters/filters";
 
 const Home = () => {
-    const dispatch = useDispatch();
     const countriesCopy = useSelector((state) => state.countriesCopy);
-    const activities = useSelector((state) => state.activities);
-
     const { items, handlerNext, handlerPrev, handlerOrderAlpha, handlerOrderPop } = usePaginated(countriesCopy);
-
-    const handlerFilter = (event) => {
-        const continent = event.target.value;
-        dispatch(getFilterContinent(continent));
-    };
-
-    const [searchState, setSearchState] = useState("");
-
-    const handlerChange = (event) => {
-        setSearchState(event.target.value);
-        dispatch(getCountryByName(event.target.value));
-    };
-
-    const handlerClick = () => {
-        dispatch(getCountryByName(""));
-        setSearchState("");
-    };
-
-    const handlerActivities = (event) => {
-        const acitivityName = event.target.value;
-        if (acitivityName === "All") {
-            dispatch(getFilterActivities(acitivityName));
-        }
-        activities.map((act) => {
-            if (acitivityName === act.name) {
-                dispatch(getFilterActivities(act));
-            }
-        });
-    };
+    const { handlerActivities, handlerFilter } = useFilter();
+    const { searchState, handlerChange, handlerClick } = useSearch();
 
     return (
         <div>
             <div>
-                <select onChange={handlerFilter}>
-                    <option value="All">Todos</option>
-                    <option value="Africa">Africa</option>
-                    <option value="Antarctica">Antarctica</option>
-                    <option value="North America">North America</option>
-                    <option value="South America">South America</option>
-                    <option value="Asia">Asia</option>
-                    <option value="Europe">Europe</option>
-                    <option value="Oceania">Oceania</option>
-                </select>
+                <p>Filtros:</p>
+                <Filters handlerActivities={handlerActivities} handlerFilter={handlerFilter} />
             </div>
-            <select onChange={handlerActivities}>
-                <option value="All">Todos</option>
-                {activities.map((act) => (
-                    <option key={act.id} value={act.name}>
-                        {act.name}
-                    </option>
-                ))}
-            </select>
             <div>
-                <button onClick={handlerOrderAlpha}>ordenar por alfabeto</button>
-                <button onClick={handlerOrderPop}>ordenar por poblacion</button>
+                <p>Ordenar por:</p>
+                <div>
+                    <button onClick={handlerOrderAlpha}>Alfabeto</button>
+                    <button onClick={handlerOrderPop}>Poblacion</button>
+                </div>
             </div>
             <div>
                 <input value={searchState} placeholder="¿Cuál es tu próximo destino?" onChange={handlerChange} />
                 <button onClick={handlerClick}>X</button>
             </div>
-            <button onClick={handlerPrev}>Prev</button>
-            <button onClick={handlerNext}>Next</button>
             <div>
                 {items.map((country) => (
                     <Card key={country.id} country={country} />
@@ -84,6 +43,8 @@ const Home = () => {
                     </div>
                 )}
             </div>
+            <button onClick={handlerPrev}>Prev</button>
+            <button onClick={handlerNext}>Next</button>
         </div>
     );
 };
