@@ -2,7 +2,7 @@ const validationForm = (value, property, error, setError) => {
     if (property === "name") {
         return nameValidation(value, error, setError);
     }
-    if (property === "dificulty") {
+    if (property === "difficulty") {
         return dificultyValidation(value, error, setError);
     }
     if (property === "duration") {

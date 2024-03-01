@@ -19,28 +19,13 @@ export const getFilterContinent = (continent) => {
 
 export const getCountryByName = (name) => {
     return async (dispatch) => {
-        const result = await axios.get(
-            `http://localhost:3001/countries/name?name=${name}`
-        );
+        const result = await axios.get(`http://localhost:3001/countries/name?name=${name}`);
         return dispatch({
             type: "GET_COUNTRY_BY_NAME",
             payload: result.data,
         });
     };
 };
-
-//! probar hacer sin redux
-// export const getCountryByID = (id) => {
-//     return async (dispatch) => {
-//         const result = await axios.get(
-//             `http://localhost:3001/countries/country/${id}`
-//         );
-//         return dispatch({
-//             type: "GET_BY_ID",
-//             payload: result.data,
-//         });
-//     };
-// };
 
 export const getActivities = () => {
     return async (dispatch) => {
@@ -52,16 +37,9 @@ export const getActivities = () => {
     };
 };
 
-//! probar hacer sin redux
-// export const addActivity = (activity) => {
-//     return async (dispatch) => {
-//         const result = await axios.post(
-//             "http://localhost:3001/activities",
-//             activity
-//         );
-//         return dispatch({
-//             type: "POST_ACTIVITIES",
-//             payload: result.data,
-//         });
-//     };
-// };
+export const getFilterActivities = (actName) => {
+    return {
+        type: "GET_FILTER_ACTIVETIES",
+        payload: actName,
+    };
+};

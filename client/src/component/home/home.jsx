@@ -1,12 +1,13 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { getCountries, getFilterContinent, getCountryByName } from "../../redux/actions";
+import { getFilterContinent, getCountryByName, getFilterActivities } from "../../redux/actions";
 import usePaginated from "../../hooks/usePaginated";
 import Card from "../card/card";
 
 const Home = () => {
     const dispatch = useDispatch();
     const countriesCopy = useSelector((state) => state.countriesCopy);
+    const activities = useSelector((state) => state.activities);
 
     const { items, handlerNext, handlerPrev, handlerOrderAlpha, handlerOrderPop } = usePaginated(countriesCopy);
 
@@ -27,11 +28,23 @@ const Home = () => {
         setSearchState("");
     };
 
+    const handlerActivities = (event) => {
+        const acitivityName = event.target.value;
+        if (acitivityName === "All") {
+            dispatch(getFilterActivities(acitivityName));
+        }
+        activities.map((act) => {
+            if (acitivityName === act.name) {
+                dispatch(getFilterActivities(act));
+            }
+        });
+    };
+
     return (
         <div>
             <div>
                 <select onChange={handlerFilter}>
-                    <option value="All">All</option>
+                    <option value="All">Todos</option>
                     <option value="Africa">Africa</option>
                     <option value="Antarctica">Antarctica</option>
                     <option value="North America">North America</option>
@@ -41,6 +54,14 @@ const Home = () => {
                     <option value="Oceania">Oceania</option>
                 </select>
             </div>
+            <select onChange={handlerActivities}>
+                <option value="All">Todos</option>
+                {activities.map((act) => (
+                    <option key={act.id} value={act.name}>
+                        {act.name}
+                    </option>
+                ))}
+            </select>
             <div>
                 <button onClick={handlerOrderAlpha}>ordenar por alfabeto</button>
                 <button onClick={handlerOrderPop}>ordenar por poblacion</button>
