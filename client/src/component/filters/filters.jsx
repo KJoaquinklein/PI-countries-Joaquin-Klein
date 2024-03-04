@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import style from "../home/home.module.css";
 
 const Filters = (props) => {
     const activities = useSelector((state) => state.activities);
@@ -8,7 +9,8 @@ const Filters = (props) => {
     return (
         <>
             <div>
-                <select onChange={handlerFilter}>
+                <p className={style.subtitle}>Contiente</p>
+                <select className={style.options} onChange={handlerFilter}>
                     <option value="All">Todos</option>
                     <option value="Africa">Africa</option>
                     <option value="Antarctica">Antarctica</option>
@@ -20,7 +22,8 @@ const Filters = (props) => {
                 </select>
             </div>
             <div>
-                <select onChange={handlerActivities}>
+                <p className={style.subtitle}>Actividad turistica</p>
+                <select className={style.options} onChange={handlerActivities}>
                     <option value="All">Todos</option>
                     {activities.map((act) => (
                         <option key={act.id} value={act.name}>

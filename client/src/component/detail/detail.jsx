@@ -8,6 +8,7 @@ import ActivityCards from "../activityCard/activityCard";
 
 //*-- OTROS ---------------------------------------------
 import axios from "axios";
+import style from "./detail.module.css";
 
 const Detail = () => {
     const { id } = useParams();
@@ -27,19 +28,21 @@ const Detail = () => {
 
     return (
         <>
-            <Link to={"/home"}>←</Link>
+            <Link className={style.buttonBack} to={"/home"}>
+                ←
+            </Link>
             {country.name ? (
-                <div>
-                    <div>
-                        <h1>
+                <div className={style.container}>
+                    <div className={style.descriptCont}>
+                        <h1 className={style.name}>
                             {country.name} | {country.id}
                         </h1>
-                        <p>{country.capital}</p>
+                        <p className={style.capital}>{country.capital}</p>
                         <p>
                             {country.continent} | {country.subregion}
                         </p>
-                        <p>{country.population}</p>
-                        <p>{country.area}</p>
+                        <p className={style.population}>{country.population}</p>
+                        <p className={style.area}>{country.area}</p>
                     </div>
                     <div>
                         <img src={country.img} alt={`bandera de ${country.name}`} height="300px" />

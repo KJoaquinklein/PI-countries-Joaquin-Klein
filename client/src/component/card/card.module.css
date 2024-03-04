@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Madimi+One&display=swap");
+
+.containerCard {
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+    height: 250px;
+    margin: 10px;
+    background-color: #052440;
+    border-radius: 6px;
+    transition: all 0.4s;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.containerCard:hover {
+    scale: 1.03;
+    background-color: #7bdfd5;
+
+    .name {
+        color: #052440;
+    }
+}
+
+.contImg {
+    height: 70%;
+}
+
+.img {
+    border-radius: 6px;
+    width: 220px;
+    height: 150px;
+    margin: 10px;
+}
+
+.name {
+    font-family: "Madimi One", sans-serif;
+    font-size: 20px;
+    color: #d0d0d0;
+    text-align: center;
+    margin: 0 10px 0 10px;
+}

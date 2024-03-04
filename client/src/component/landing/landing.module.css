@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Madimi+One&display=swap");
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.gif {
+    width: 500px;
+}
+
+.title {
+    font-family: "Madimi One", sans-serif;
+    font-size: 30px;
+    text-decoration: none;
+    color: #052440;
+    border: 3px solid #052440;
+    border-radius: 10px;
+    transition: all 0.4s;
+}
+
+.title:hover {
+    scale: 1.04;
+    color: #f26b76;
+    border: 3px solid #f26b76;
+}
+
+.footer {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: end;
+}

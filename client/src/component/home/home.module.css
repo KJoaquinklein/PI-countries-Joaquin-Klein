@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Madimi+One&display=swap");
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* !-------------------------------------------------------------------- */
+
+.containerTop {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    background-color: #052440;
+    width: 98vw;
+    margin: 1vw;
+    height: 8vh;
+    font-family: "Madimi One", sans-serif;
+    border-radius: 6px;
+}
+
+.searchBar {
+    margin: 0 50px 0 50px;
+}
+
+.input {
+    font-family: "Madimi One", sans-serif;
+    font-size: 20px;
+    border: 0;
+    border-radius: 6px;
+    color: #052440;
+    height: 34px;
+}
+
+.buttonX {
+    font-family: "Madimi One", sans-serif;
+    font-size: 20px;
+    background-color: #052440;
+    color: #d0d0d0;
+    border: 0;
+    height: 36px;
+    width: 36px;
+    border-radius: 6px;
+    margin-left: 5px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.buttonX:hover {
+    color: #f26b76;
+    background-color: #fbeaeb;
+}
+
+.formLink {
+    font-size: 20px;
+    text-decoration: none;
+    background-color: #3bd9c9;
+    color: #052440;
+    height: 25px;
+    padding: 5px;
+    border-radius: 6px;
+    transition: all 0.3s;
+}
+
+.formLink:hover {
+    scale: 1.1;
+    color: #f26b76;
+    background-color: #fbeaeb;
+}
+
+/* !------------------------------------------------------------- */
+
+.optionCountryCont {
+    display: flex;
+}
+
+.optionsBar {
+    display: flex;
+    flex-direction: column;
+    font-family: "Madimi One", sans-serif;
+    background-color: #052440;
+    height: 85vh;
+    width: 220px;
+    margin: 0 0 1vw 1vw;
+    border-radius: 4px;
+}
+
+.title {
+    font-size: 30px;
+    color: #3bd9c9;
+    text-align: center;
+    height: 30px;
+}
+
+.optionCont {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    background-color: #052440;
+    color: #d0d0d0;
+    margin: 10px 10px 15px 10px;
+    border-radius: 6px;
+}
+
+.optionTitle {
+    height: 0px;
+    margin-left: 10px;
+    color: #3bd9c9;
+}
+
+.subtitle {
+    height: 0px;
+    margin-left: 10px;
+}
+
+.options {
+    font-family: "Madimi One", sans-serif;
+    font-size: 20px;
+    color: #052440;
+    width: 180px;
+    max-width: 180px;
+    margin: 5px 10px 15px 10px;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.options:hover {
+    color: #f26b76;
+    border: 1px solid #f26b76;
+}
+
+.SortButton {
+    font-family: "Madimi One", sans-serif;
+    font-size: 20px;
+    color: #052440;
+    width: 180px;
+    margin: 15px 10px 10px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.SortButton:hover {
+    color: #f26b76;
+    border: 2px solid #f26b76;
+}
+
+/* !---------------------------------------------------------------------*/
+
+.cardsCont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px;
+    width: 83.2vw;
+    height: 75vh;
+    margin: 0 1vw 1vw 1vw;
+    overflow: auto;
+}
+
+.cardsCont::-webkit-scrollbar {
+    width: 10px;
+}
+
+.cardsCont::-webkit-scrollbar-thumb {
+    background-color: #052440;
+    border-radius: 6px;
+}
+
+.paginatedCont {
+    background-color: #052440;
+    width: 83.2vw;
+    height: 8vh;
+    border-radius: 6px;
+    margin: 0 1vw 1vw 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonPag {
+    font-family: "Madimi One", sans-serif;
+    font-size: 25px;
+    margin: 0 10px 0 10px;
+    background-color: #3bd9c9;
+    color: #052440;
+    border-radius: 6px;
+    border: #3bd9c9;
+    cursor: pointer;
+}
+
+/* !---------------------------------------------- */
+
+.error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    padding: 10px;
+}
+
+.errorText {
+    font-family: "Madimi One", sans-serif;
+    text-align: center;
+    font-size: 30px;
+    color: #f2f2f2;
+}
+
+.errorImg {
+    width: 250px;
+}
