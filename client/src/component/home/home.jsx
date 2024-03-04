@@ -20,44 +20,47 @@ const Home = () => {
 
     return (
         <div className={style.container}>
-            <div className={style.containerTop}>
-                <Link className={style.formLink} to="/form">
-                    Crear actividad turistica
+            <div className={style.optionsBar}>
+                <Link className={style.backLink} to="/">
+                    Volver al inicio
                 </Link>
 
-                <div className={style.searchBar}>
-                    <input
-                        className={style.input}
-                        value={searchState}
-                        placeholder="Mi próximo destino es..."
-                        onChange={handlerChange}
-                    />
-                    <button className={style.buttonX} onClick={handlerClick}>
-                        X
+                <p className={style.title}>Opciones</p>
+
+                <div className={style.optionCont}>
+                    <p className={style.optionTitle}>Filtrar por:</p>
+                    <Filters handlerActivities={handlerActivities} handlerFilter={handlerFilter} />
+                </div>
+
+                <div className={style.optionCont}>
+                    <p className={style.optionTitle}>Ordenar por:</p>
+                    <button className={style.SortButton} onClick={handlerOrderAlpha}>
+                        Alfabeto
+                    </button>
+                    <button className={style.SortButton} onClick={handlerOrderPop}>
+                        Poblacion
                     </button>
                 </div>
             </div>
 
-            <div className={style.optionCountryCont}>
-                <div className={style.optionsBar}>
-                    <p className={style.title}>Opciones</p>
+            <div className={style.searchCountryCont}>
+                <div className={style.containerTop}>
+                    <Link className={style.formLink} to="/form">
+                        Crear actividad turistica
+                    </Link>
 
-                    <div className={style.optionCont}>
-                        <p className={style.optionTitle}>Filtrar por:</p>
-                        <Filters handlerActivities={handlerActivities} handlerFilter={handlerFilter} />
-                    </div>
-
-                    <div className={style.optionCont}>
-                        <p className={style.optionTitle}>Ordenar por:</p>
-                        <button className={style.SortButton} onClick={handlerOrderAlpha}>
-                            Alfabeto
-                        </button>
-                        <button className={style.SortButton} onClick={handlerOrderPop}>
-                            Poblacion
+                    <div className={style.searchBar}>
+                        <input
+                            className={style.input}
+                            value={searchState}
+                            placeholder="Mi próximo destino es..."
+                            onChange={handlerChange}
+                        />
+                        <button className={style.buttonX} onClick={handlerClick}>
+                            X
                         </button>
                     </div>
                 </div>
-
                 <div>
                     <div className={style.countryCont}>
                         <div className={style.cardsCont}>

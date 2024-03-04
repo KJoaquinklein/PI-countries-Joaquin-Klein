@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Madimi+One&display=swap");
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #052440;
+}
+
+.buttonCont {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    width: 150px;
+    border-radius: 6px;
+    transition: all 0.4s;
+}
+
+.buttonBack {
+    font-family: "Madimi One", sans-serif;
+    font-size: 30px;
+    color: #f1efef;
+    transition: all 0.4s;
+    text-decoration: none;
+    margin-top: 40px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 3px solid #f1efef;
+    border-radius: 6px;
+}
+
+.buttonBack:hover {
+    scale: 1.03;
+    color: #f26b76;
+    border: 3px solid #f26b76;
+}
+
+/* !------------------------------------------------------ */
+
+.DetailCoint {
+    display: flex;
+    margin-left: 50px;
+    align-items: center;
+    justify-content: start;
+    height: 400px;
+}
+
+.imgCont {
+    margin: 20px;
+    border-radius: 10px;
+    height: 300px;
+    width: 460px;
+}
+
+.descriptCont {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    font-family: "Madimi One", sans-serif;
+    font-size: 25px;
+    color: #f1efef;
+}
+
+.name {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    line-height: 0px;
+    margin-bottom: 0px;
+}
+
+.bar {
+    margin: 0 10px 0 10px;
+}
+
+.textIconCont {
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+}
+
+.icon {
+    height: 50px;
+    margin-right: 15px;
+}
+
+/* !----------------------------------------------------- */
+
+.cardsCont {
+    display: flex;
+    width: 91vw;
+    height: 200px;
+    margin: 30px 70px 0 70px;
+    border: 5px solid #f26b76;
+    border-radius: 10px;
+}
+
+.card {
+    background-color: #f26b76;
+    margin: 10px;
+    border-radius: 6px;
+}
+
+.nameAct {
+    font-family: "Madimi One", sans-serif;
+    color: #052440;
+    font-size: 25px;
+}

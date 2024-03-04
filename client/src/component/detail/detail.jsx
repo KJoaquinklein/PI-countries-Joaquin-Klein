@@ -27,32 +27,51 @@ const Detail = () => {
     const activities = useSelector((state) => state.activities);
 
     return (
-        <>
-            <Link className={style.buttonBack} to={"/home"}>
-                ←
-            </Link>
-            {country.name ? (
-                <div className={style.container}>
-                    <div className={style.descriptCont}>
-                        <h1 className={style.name}>
-                            {country.name} | {country.id}
-                        </h1>
-                        <p className={style.capital}>{country.capital}</p>
-                        <p>
-                            {country.continent} | {country.subregion}
-                        </p>
+        <div className={style.container}>
+            <div className={style.buttonCont}>
+                <Link className={style.buttonBack} to={"/home"}>
+                    Atras
+                </Link>
+            </div>
+
+            <div className={style.DetailCoint}>
+                <img className={style.imgCont} src={country.img} alt={`bandera de ${country.name}`} />
+                <div className={style.descriptCont}>
+                    <h1 className={style.name}>
+                        <p>{country.name}</p> <p className={style.bar}>|</p> <p>{country.id}</p>
+                    </h1>
+
+                    <div className={style.textIconCont}>
+                        <img className={style.icon} src="/src/assets/capital.png" alt="capital" />
+                        {country.capital ? <p className={style.capital}>{country.capital}</p> : <p>-</p>}
+                    </div>
+
+                    <div className={style.textIconCont}>
+                        <img className={style.icon} src="/src/assets/continent.png" />
+                        <div>
+                            {country.subregion ? (
+                                <p>
+                                    {country.continent} | {country.subregion}
+                                </p>
+                            ) : (
+                                <p>{country.continent}</p>
+                            )}
+                        </div>
+                    </div>
+
+                    <div className={style.textIconCont}>
+                        <img className={style.icon} src="/src/assets/population.png" />
                         <p className={style.population}>{country.population}</p>
+                    </div>
+
+                    <div className={style.textIconCont}>
+                        <img className={style.icon} src="/src/assets/area.png" />
                         <p className={style.area}>{country.area}</p>
                     </div>
-                    <div>
-                        <img src={country.img} alt={`bandera de ${country.name}`} height="300px" />
-                    </div>
-                    <ActivityCards activities={activities} id={id} />
                 </div>
-            ) : (
-                <p>No se encontró el país solicitado :(</p>
-            )}
-        </>
+            </div>
+            <ActivityCards activities={activities} id={id} />
+        </div>
     );
 };
 
