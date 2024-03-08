@@ -14,7 +14,8 @@ import style from "./home.module.css";
 
 const Home = () => {
     const countriesCopy = useSelector((state) => state.countriesCopy);
-    const { items, handlerNext, handlerPrev, handlerOrderAlpha, handlerOrderPop } = usePaginated(countriesCopy);
+    const { items, handlerNext, handlerPrev, handlerOrderAlpha, handlerOrderPop, validationOrder } =
+        usePaginated(countriesCopy);
     const { handlerActivities, handlerFilter } = useFilter();
     const { searchState, handlerChange, handlerClick } = useSearch();
 
@@ -34,11 +35,17 @@ const Home = () => {
 
                 <div className={style.optionCont}>
                     <p className={style.optionTitle}>Ordenar por:</p>
-                    <button className={style.SortButton} onClick={handlerOrderAlpha}>
+                    <button
+                        className={validationOrder === "alpha" ? style.optionActived : style.sortButton}
+                        onClick={handlerOrderAlpha}
+                    >
                         Alfabeto
                     </button>
-                    <button className={style.SortButton} onClick={handlerOrderPop}>
-                        Poblacion
+                    <button
+                        className={validationOrder === "pop" ? style.optionActived : style.sortButton}
+                        onClick={handlerOrderPop}
+                    >
+                        Población
                     </button>
                 </div>
             </div>

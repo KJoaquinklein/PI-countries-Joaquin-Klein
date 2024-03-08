@@ -8,14 +8,29 @@ const useFilter = () => {
 
     const handlerActivities = (event) => {
         const acitivityName = event.target.value;
+
         if (acitivityName === "All") {
-            dispatch(getFilterActivities(acitivityName));
+            return dispatch(getFilterActivities(acitivityName));
         }
+
+        let actFilterCount = [];
+        const countriesAct = [];
+        const countriesActNames = [];
+
         activities.map((act) => {
             if (acitivityName === act.name) {
-                dispatch(getFilterActivities(act));
+                actFilterCount = [...actFilterCount, ...act.Countries];
             }
         });
+
+        actFilterCount.map((country) => {
+            if (!countriesActNames.includes(country.name)) {
+                countriesActNames.push(country.name);
+                countriesAct.push(country);
+            }
+        });
+
+        dispatch(getFilterActivities(countriesAct));
     };
 
     const handlerFilter = (event) => {

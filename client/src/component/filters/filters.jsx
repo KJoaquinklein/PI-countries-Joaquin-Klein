@@ -6,6 +6,15 @@ const Filters = (props) => {
 
     const { handlerFilter, handlerActivities } = props;
 
+    const activitiesNoRepeat = [];
+    const activitiesCopy = [];
+    activities.map((act) => {
+        if (!activitiesNoRepeat.includes(act.name)) {
+            activitiesNoRepeat.push(act.name);
+            activitiesCopy.push(act);
+        }
+    });
+
     return (
         <>
             <div>
@@ -25,7 +34,7 @@ const Filters = (props) => {
                 <p className={style.subtitle}>Actividad turistica</p>
                 <select className={style.options} onChange={handlerActivities}>
                     <option value="All">Todos</option>
-                    {activities.map((act) => (
+                    {activitiesCopy.map((act) => (
                         <option key={act.id} value={act.name}>
                             {act.name}
                         </option>

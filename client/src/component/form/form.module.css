@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Madimi+One&display=swap");
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: #052440;
+    height: 100vh;
+}
+
+.topCont {
+    display: flex;
+}
+
+.linkCont {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 150px;
+}
+
+.linkBack {
+    font-family: "Madimi One", sans-serif;
+    color: #d0d0d0;
+    font-size: 25px;
+    text-decoration: none;
+    border: 5px solid #d0d0d0;
+    border-radius: 6px;
+    transition: all 0.4s;
+}
+
+.linkBack:hover {
+    scale: 1.03;
+    color: #f26b76;
+    border: 5px solid #f26b76;
+}
+
+.titleCont {
+    text-align: center;
+    width: 100%;
+    margin-right: 130px;
+}
+
+.gif {
+    width: 200px;
+}
+
+.title {
+    font-family: "Madimi One", sans-serif;
+    color: #f26b76;
+    font-size: 35px;
+    text-align: center;
+}
+
+.formCont {
+    display: flex;
+    justify-content: center;
+}
+
+.form {
+    border: 6px solid #d0d0d0;
+    border-radius: 10px;
+    width: 550px;
+    text-align: center;
+    padding: 20px 0 20px 0;
+}
+
+.formInputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputCont {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.label {
+    font-family: "Madimi One", sans-serif;
+    color: #d0d0d0;
+    font-size: 25px;
+    margin: 10px;
+}
+
+.input {
+    font-family: "Madimi One", sans-serif;
+    color: #052440;
+    font-size: 25px;
+    border: 3px solid #d0d0d0;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.seasonCont {
+    display: flex;
+    justify-content: center;
+}
+
+.select {
+    font-family: "Madimi One", sans-serif;
+    color: #052440;
+    font-size: 25px;
+    border: 3px solid #d0d0d0;
+    border-radius: 5px;
+}
+
+.contryCont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.countrySelectCont {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    border: 6px solid #d0d0d0;
+    border-radius: 10px;
+    width: 450px;
+    height: 100px;
+}
+
+.countryCard {
+    display: flex;
+    align-items: center;
+    font-family: "Madimi One", sans-serif;
+    color: #d0d0d0;
+    font-size: 20px;
+    border: 3px solid #d0d0d0;
+    border-radius: 5px;
+    margin: 10px;
+    height: 30px;
+}
+
+.countrySelectClose {
+    font-family: "Madimi One", sans-serif;
+    color: #d0d0d0;
+    border: 0;
+    background-color: #052440;
+    font-size: 15px;
+    margin-left: 10px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.countrySelectClose:hover {
+    color: #f26b76;
+}
+
+.selectCountry {
+    font-family: "Madimi One", sans-serif;
+    color: #052440;
+    font-size: 25px;
+    border: 3px solid #d0d0d0;
+    border-radius: 5px;
+    width: 280px;
+}
+
+.inputCountry {
+    display: flex;
+    margin: 10px;
+}
+
+.submit {
+    font-family: "Madimi One", sans-serif;
+    color: #052440;
+    font-size: 25px;
+    border: 3px solid #d0d0d0;
+    border-radius: 5px;
+    margin: 10px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.submit:hover {
+    color: #f26b76;
+    border: 3px solid #f26b76;
+}

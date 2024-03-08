@@ -1,11 +1,10 @@
 //*-- HOOKS --------------------------------------------
-import { useState } from "react";
-import { useSelector } from "react-redux";
 import useForm from "../../hooks/useForm";
+import { Link } from "react-router-dom";
 
 //*-- OTROS --------------------------------------------
-import axios from "axios";
 import validationForm from "../../hooks/validationForm";
+import style from "./form.module.css";
 
 //*-- COMPONENTS ---------------------------------------
 import CountryForm from "../countryForm/CountryForm";
@@ -22,39 +21,69 @@ const Form = () => {
     } = useForm(validationForm);
 
     return (
-        <>
-            <p>Actividades turísticas</p>
-            <form>
-                <label htmlFor="name">Nombre</label>
-                <input type="text" name="name" onChange={handlerChange} />
+        <div className={style.container}>
+            <div className={style.topCont}>
+                <div className={style.linkCont}>
+                    <Link className={style.linkBack} to="/home">
+                        Atras
+                    </Link>
+                </div>
+                <div className={style.titleCont}>
+                    <p className={style.title}>Crear actividad turística</p>
+                </div>
+            </div>
+            <div className={style.formCont}>
+                <form className={style.form}>
+                    <div className={style.formInputs}>
+                        <div>
+                            <div className={style.inputCont}>
+                                <label className={style.label} htmlFor="name">
+                                    Nombre
+                                </label>
+                                <input className={style.input} type="text" name="name" onChange={handlerChange} />
+                            </div>
 
-                <label htmlFor="difficulty">Dificultad</label>
-                <input type="text" name="difficulty" onChange={handlerChange} />
+                            <div className={style.inputCont}>
+                                <label className={style.label} htmlFor="difficulty">
+                                    Dificultad
+                                </label>
+                                <input className={style.input} type="text" name="difficulty" onChange={handlerChange} />
+                            </div>
 
-                <label htmlFor="duration">Duración</label>
-                <input type="text" name="duration" onChange={handlerChange} />
+                            <div className={style.inputCont}>
+                                <label className={style.label} htmlFor="duration">
+                                    Duración
+                                </label>
+                                <input className={style.input} type="text" name="duration" onChange={handlerChange} />
+                            </div>
 
-                <p>Temporada</p>
-                <select onChange={handlerSeason}>
-                    <option selected disabled>
-                        Selecciona temporada
-                    </option>
-                    <option value="Verano">Verano</option>
-                    <option value="Otoño">Otoño </option>
-                    <option value="Invierno">Invierno</option>
-                    <option value="Primavera">Primavera</option>
-                </select>
+                            <div className={style.seasonCont}>
+                                <p className={style.label}>Temporada</p>
+                                <select className={style.select} onChange={handlerSeason}>
+                                    <option selected disabled>
+                                        Selecciona temporada
+                                    </option>
+                                    <option value="Verano">Verano</option>
+                                    <option value="Otoño">Otoño </option>
+                                    <option value="Invierno">Invierno</option>
+                                    <option value="Primavera">Primavera</option>
+                                </select>
+                            </div>
 
-                <CountryForm
-                    countrySelect={countrySelect}
-                    countriesSort={countriesSort}
-                    handlerCloseTag={handlerCloseTag}
-                    handlerCountries={handlerCountries}
-                />
-
-                <button onClick={handlerSubmit}>Crear actividad</button>
-            </form>
-        </>
+                            <CountryForm
+                                countrySelect={countrySelect}
+                                countriesSort={countriesSort}
+                                handlerCloseTag={handlerCloseTag}
+                                handlerCountries={handlerCountries}
+                            />
+                        </div>
+                    </div>
+                    <button className={style.submit} onClick={handlerSubmit}>
+                        Crear
+                    </button>
+                </form>
+            </div>
+        </div>
     );
 };
 

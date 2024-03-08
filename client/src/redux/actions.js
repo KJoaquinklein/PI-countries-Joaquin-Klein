@@ -37,9 +37,9 @@ export const getActivities = () => {
     };
 };
 
-export const getFilterActivities = (actName) => {
+export const getFilterActivities = (countriesAct) => {
     return {
         type: "GET_FILTER_ACTIVETIES",
-        payload: actName,
+        payload: countriesAct,
     };
 };

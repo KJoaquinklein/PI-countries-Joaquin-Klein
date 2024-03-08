@@ -31,7 +31,7 @@ const reducer = (state = initialState, action) => {
             } else {
                 return {
                     ...state,
-                    countriesCopy: action.payload.Countries,
+                    countriesCopy: action.payload,
                 };
             }
         default:

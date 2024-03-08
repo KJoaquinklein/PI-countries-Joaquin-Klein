@@ -12,8 +12,15 @@ const usePaginated = (countries) => {
         useSorted(countries);
 
     let orderCountries = [...countries];
-    if (orderAlpha) orderCountries = sortAlphaCounties();
-    if (orderPop) orderCountries = sortPopCounties();
+    let validationOrder;
+    if (orderAlpha) {
+        orderCountries = sortAlphaCounties();
+        validationOrder = "alpha";
+    }
+    if (orderPop) {
+        orderCountries = sortPopCounties();
+        validationOrder = "pop";
+    }
 
     const items = orderCountries.slice(startIndex, endIndex);
 
@@ -65,6 +72,7 @@ const usePaginated = (countries) => {
         handlerPrev,
         handlerOrderAlpha,
         handlerOrderPop,
+        validationOrder,
     };
 };
 

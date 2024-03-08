@@ -43,7 +43,7 @@ const Detail = () => {
 
                     <div className={style.textIconCont}>
                         <img className={style.icon} src="/src/assets/capital.png" alt="capital" />
-                        {country.capital ? <p className={style.capital}>{country.capital}</p> : <p>-</p>}
+                        {country.capital ? <p>{country.capital}</p> : <p>-</p>}
                     </div>
 
                     <div className={style.textIconCont}>
@@ -61,15 +61,16 @@ const Detail = () => {
 
                     <div className={style.textIconCont}>
                         <img className={style.icon} src="/src/assets/population.png" />
-                        <p className={style.population}>{country.population}</p>
+                        <p>{country.population}</p>
                     </div>
 
                     <div className={style.textIconCont}>
                         <img className={style.icon} src="/src/assets/area.png" />
-                        <p className={style.area}>{country.area}</p>
+                        <p>{country.area}</p>
                     </div>
                 </div>
             </div>
+            <p className={style.subTitle}>Actividades turísticas:</p>
             <ActivityCards activities={activities} id={id} />
         </div>
     );
