@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Madimi+One&display=swap");
+
+.optionTitle {
+    height: 0px;
+    margin-left: 10px;
+    color: #f26b76;
+}
+
+.sortButton {
+    font-family: "Madimi One", sans-serif;
+    font-size: 20px;
+    color: #052440;
+    width: 170px;
+    margin: 15px 10px 10px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.sortButton:hover {
+    color: #f26b76;
+    border: 2px solid #f26b76;
+}
+
+.optionActived {
+    font-family: "Madimi One", sans-serif;
+    font-size: 20px;
+    color: #052440;
+    background-color: #f26b76;
+    width: 180px;
+    margin: 15px 10px 10px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}

@@ -134,3 +134,12 @@
     font-size: 15px;
     margin: 0 10px 10px 10px;
 }
+
+/* ! --error-- */
+
+.error {
+    font-family: "Madimi One", sans-serif;
+    color: #052440;
+    font-size: 30px;
+    text-align: center;
+}

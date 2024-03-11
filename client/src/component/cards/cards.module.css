@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Madimi+One&display=swap");
+
+.cardsCont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px;
+    width: 83.2vw;
+    height: 75vh;
+    margin: 0 1vw 0 1vw;
+    overflow: auto;
+}
+
+.cardsCont::-webkit-scrollbar {
+    width: 10px;
+}
+
+.cardsCont::-webkit-scrollbar-thumb {
+    background-color: #052440;
+    border-radius: 6px;
+}
+
+.paginatedCont {
+    width: 83.2vw;
+    height: 8vh;
+    border-radius: 6px;
+    margin: 0 1vw 1vw 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.numPage {
+    font-family: "Madimi One", sans-serif;
+    font-size: 25px;
+    margin: 0 10px 0 10px;
+    color: #052440;
+}
+
+.buttonPag {
+    font-family: "Madimi One", sans-serif;
+    font-size: 25px;
+    margin: 0 10px 0 10px;
+    background-color: #cae8fe;
+    color: #052440;
+    border-radius: 6px;
+    border: #cae8fe;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.buttonPag:hover {
+    background-color: #36b6fa;
+}
+
+.error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    padding: 10px;
+}
+
+.errorText {
+    font-family: "Madimi One", sans-serif;
+    text-align: center;
+    font-size: 30px;
+    color: #052440;
+}
+
+.errorImg {
+    width: 250px;
+}
+
+@media (max-width: 1350px) {
+    .cardsCont {
+        width: 78vw;
+    }
+}

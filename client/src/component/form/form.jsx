@@ -101,7 +101,21 @@ const Form = () => {
                             />
                         </div>
                     </div>
-                    <button className={style.submit} onClick={handlerSubmit}>
+                    <button
+                        className={
+                            formError.name ||
+                            formError.difficulty ||
+                            formError.duration ||
+                            !form.name ||
+                            !form.difficulty ||
+                            !form.duration ||
+                            !form.season ||
+                            !form.countryId.length
+                                ? style.submitBlock
+                                : style.submit
+                        }
+                        onClick={handlerSubmit}
+                    >
                         Crear
                     </button>
                 </form>

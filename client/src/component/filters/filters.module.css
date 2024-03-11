@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Madimi+One&display=swap");
+
+.optionTitle {
+    height: 0px;
+    margin-left: 10px;
+    color: #f26b76;
+}
+
+.subtitle {
+    height: 0px;
+    margin-left: 10px;
+}
+
+.options {
+    font-family: "Madimi One", sans-serif;
+    font-size: 20px;
+    color: #052440;
+    width: 170px;
+    max-width: 170px;
+    margin: 5px 10px 15px 10px;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.options:hover {
+    color: #f26b76;
+    border: 1px solid #f26b76;
+}

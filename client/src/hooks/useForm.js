@@ -111,7 +111,6 @@ const useForm = (validationForm) => {
         handlerCountries,
         handlerCloseTag,
         handlerSubmit,
-        errorSubmit,
     };
 };
 

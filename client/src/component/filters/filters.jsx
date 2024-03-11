@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import style from "../home/home.module.css";
+import style from "./filters.module.css";
 
 const Filters = (props) => {
     const activities = useSelector((state) => state.activities);
@@ -17,6 +17,7 @@ const Filters = (props) => {
 
     return (
         <>
+            <p className={style.optionTitle}>Filtrar por:</p>
             <div>
                 <p className={style.subtitle}>Contiente</p>
                 <select className={style.options} onChange={handlerFilter}>

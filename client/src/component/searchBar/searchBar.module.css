@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Madimi+One&display=swap");
+
+.searchBar {
+    margin: 0 50px 0 50px;
+}
+
+.input {
+    font-family: "Madimi One", sans-serif;
+    font-size: 20px;
+    border: 3px solid #052440;
+    border-radius: 6px;
+    color: #052440;
+    height: 34px;
+}
+
+.buttonX {
+    font-family: "Madimi One", sans-serif;
+    font-size: 20px;
+    background-color: #052440;
+    color: #d0d0d0;
+    border: 0;
+    height: 36px;
+    width: 36px;
+    border-radius: 6px;
+    margin-left: 5px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.buttonX:hover {
+    color: #f26b76;
+}
+
+.formLink {
+    font-size: 20px;
+    text-decoration: none;
+    color: #052440;
+    height: 25px;
+    padding: 5px;
+    border: 3px solid #052440;
+    border-radius: 6px;
+    transition: all 0.3s;
+}
+
+.formLink:hover {
+    scale: 1.1;
+    color: #f26b76;
+    border: 3px solid #f26b76;
+}
+
+@media (max-width: 900px) {
+    .searchBar {
+        margin: 0 70px 0 10px;
+    }
+}
+
+@media (max-width: 800px) {
+    .searchBar {
+        margin: 10px 0 0 0;
+    }
+}

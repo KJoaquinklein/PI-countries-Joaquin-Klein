@@ -39,44 +39,50 @@ const Detail = () => {
                 </Link>
             </div>
 
-            <div className={style.DetailCoint}>
-                <img className={style.imgCont} src={country.img} alt={`bandera de ${country.name}`} />
-                <div className={style.descriptCont}>
-                    <h1 className={style.name}>
-                        <p>{country.name}</p> <p className={style.bar}>|</p> <p>{country.id}</p>
-                    </h1>
+            {!country.data ? (
+                <>
+                    <div className={style.DetailCoint}>
+                        <img className={style.imgCont} src={country.img} alt={`bandera de ${country.name}`} />
+                        <div className={style.descriptCont}>
+                            <h1 className={style.name}>
+                                <p>{country.name}</p> <p className={style.bar}>|</p> <p>{country.id}</p>
+                            </h1>
 
-                    <div className={style.textIconCont}>
-                        <img className={style.icon} src="/src/assets/capital.png" alt="capital" />
-                        {country.capital ? <p>{country.capital}</p> : <p>-</p>}
-                    </div>
+                            <div className={style.textIconCont}>
+                                <img className={style.icon} src="/src/assets/capital.png" alt="capital" />
+                                {country.capital ? <p>{country.capital}</p> : <p>-</p>}
+                            </div>
 
-                    <div className={style.textIconCont}>
-                        <img className={style.icon} src="/src/assets/continent.png" />
-                        <div>
-                            {country.subregion ? (
-                                <p>
-                                    {country.continent} | {country.subregion}
-                                </p>
-                            ) : (
-                                <p>{country.continent}</p>
-                            )}
+                            <div className={style.textIconCont}>
+                                <img className={style.icon} src="/src/assets/continent.png" />
+                                <div>
+                                    {country.subregion ? (
+                                        <p>
+                                            {country.continent} | {country.subregion}
+                                        </p>
+                                    ) : (
+                                        <p>{country.continent}</p>
+                                    )}
+                                </div>
+                            </div>
+
+                            <div className={style.textIconCont}>
+                                <img className={style.icon} src="/src/assets/population.png" />
+                                <p>{country.population}</p>
+                            </div>
+
+                            <div className={style.textIconCont}>
+                                <img className={style.icon} src="/src/assets/area.png" />
+                                <p>{country.area}</p>
+                            </div>
                         </div>
                     </div>
-
-                    <div className={style.textIconCont}>
-                        <img className={style.icon} src="/src/assets/population.png" />
-                        <p>{country.population}</p>
-                    </div>
-
-                    <div className={style.textIconCont}>
-                        <img className={style.icon} src="/src/assets/area.png" />
-                        <p>{country.area}</p>
-                    </div>
-                </div>
-            </div>
-            <p className={style.subTitle}>Actividades turísticas:</p>
-            <ActivityCards activities={activities} id={id} />
+                    <p className={style.subTitle}>Actividades turísticas:</p>
+                    <ActivityCards activities={activities} id={id} />
+                </>
+            ) : (
+                <p className={style.error}>{country.data}</p>
+            )}
         </div>
     );
 };
