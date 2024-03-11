@@ -3,7 +3,6 @@
 .container {
     width: 100vw;
     height: 100vh;
-    background-color: #052440;
 }
 
 .buttonCont {
@@ -18,13 +17,13 @@
 .buttonBack {
     font-family: "Madimi One", sans-serif;
     font-size: 30px;
-    color: #d0d0d0;
+    color: #052440;
     transition: all 0.4s;
     text-decoration: none;
     margin-top: 20px;
     padding-top: 5px;
     padding-bottom: 5px;
-    border: 5px solid #d0d0d0;
+    border: 5px solid #052440;
     border-radius: 6px;
 }
 
@@ -49,6 +48,8 @@
     border-radius: 10px;
     height: 300px;
     width: 460px;
+    background-color: #cae8fe;
+    padding: 10px;
 }
 
 .descriptCont {
@@ -57,7 +58,7 @@
     margin-left: 20px;
     font-family: "Madimi One", sans-serif;
     font-size: 25px;
-    color: #d0d0d0;
+    color: #052440;
 }
 
 .name {
@@ -88,7 +89,7 @@
 .subTitle {
     font-family: "Madimi One", sans-serif;
     font-size: 25px;
-    color: #d0d0d0;
+    color: #052440;
     margin-left: 70px;
     line-height: 25px;
 }
@@ -108,12 +109,12 @@
 }
 
 .cardsCont::-webkit-scrollbar-thumb {
-    background-color: #888888;
+    background-color: #36b6fa;
     border-radius: 6px;
 }
 
 .card {
-    background-color: #f26b76;
+    background-color: #cae8fe;
     margin: 10px;
     border-radius: 6px;
     min-width: 200px;

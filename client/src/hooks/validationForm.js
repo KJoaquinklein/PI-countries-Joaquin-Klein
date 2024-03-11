@@ -20,11 +20,11 @@ const nameValidation = (value, error, setError) => {
 
 const dificultyValidation = (value, error, setError) => {
     if (isNaN(value)) {
-        setError({ ...error, dificulty: "La dificultad tiene que ser un numero" });
+        setError({ ...error, difficulty: "La dificultad tiene que ser un numero" });
     } else if (parseInt(value) < 1 || parseInt(value) > 5) {
-        setError({ ...error, dificulty: "La dificultad tiene que ser un numero entre 1 y 5" });
+        setError({ ...error, difficulty: "La dificultad tiene que ser un numero entre 1 y 5" });
     } else {
-        setError({ ...error, dificulty: "" });
+        setError({ ...error, difficulty: "" });
     }
 };
 

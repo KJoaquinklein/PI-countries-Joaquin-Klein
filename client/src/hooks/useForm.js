@@ -74,9 +74,19 @@ const useForm = (validationForm) => {
     };
 
     //!--SUBMIT-------------------------------------------------------------------------------
+
     const handlerSubmit = (event) => {
         event.preventDefault();
-        if (!formError.name && !formError.difficulty && !formError.duration && countrySelect.length) {
+
+        if (!form.name || !form.difficulty || !form.duration || !form.season || !form.countryId) {
+            return window.alert("Faltan datos!");
+        }
+
+        if (formError.name || formError.difficulty || formError.duration) {
+            return window.alert("Hay datos erroneos!");
+        }
+
+        if (!formError.name && !formError.difficulty && !formError.duration && form.season && countrySelect.length) {
             const activity = {
                 name: form.name,
                 difficulty: parseInt(form.difficulty),
@@ -84,15 +94,16 @@ const useForm = (validationForm) => {
                 season: form.season,
                 countryId: form.countryId,
             };
-            console.log(activity);
 
             axios.post("http://localhost:3001/activities", activity).then(({ data }) => {
-                console.log(data);
+                window.alert(data);
             });
         }
     };
 
     return {
+        formError,
+        form,
         countrySelect,
         handlerChange,
         handlerSeason,
@@ -100,6 +111,7 @@ const useForm = (validationForm) => {
         handlerCountries,
         handlerCloseTag,
         handlerSubmit,
+        errorSubmit,
     };
 };
 

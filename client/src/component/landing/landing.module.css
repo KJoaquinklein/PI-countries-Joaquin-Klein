@@ -30,7 +30,27 @@
 
 .footer {
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-    height: 100vh;
+    height: 38vh;
     display: flex;
     align-items: end;
+}
+
+@media (max-width: 500px) {
+    .gif {
+        width: 350px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .footer {
+        height: 56vh;
+    }
+}
+
+@media (max-width: 391px) {
+    .gif {
+        margin-top: 100px;
+    }
 }

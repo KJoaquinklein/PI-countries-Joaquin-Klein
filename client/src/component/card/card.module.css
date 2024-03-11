@@ -6,7 +6,7 @@
     width: 240px;
     height: 250px;
     margin: 10px;
-    background-color: #052440;
+    background-color: #cae8fe;
     border-radius: 6px;
     transition: all 0.4s;
     cursor: pointer;
@@ -15,10 +15,14 @@
 
 .containerCard:hover {
     scale: 1.03;
-    background-color: #7bdfd5;
+    background-color: #052440;
 
     .name {
-        color: #052440;
+        color: #cae8fe;
+    }
+
+    .continent {
+        color: #cae8fe;
     }
 }
 
@@ -36,7 +40,15 @@
 .name {
     font-family: "Madimi One", sans-serif;
     font-size: 20px;
-    color: #d0d0d0;
+    color: #052440;
+    text-align: center;
+    margin: 0 10px 0 10px;
+}
+
+.continent {
+    font-family: "Madimi One", sans-serif;
+    font-size: 20px;
+    color: #2c567a;
     text-align: center;
     margin: 0 10px 0 10px;
 }

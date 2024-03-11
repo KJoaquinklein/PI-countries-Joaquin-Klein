@@ -3,8 +3,6 @@
 .container {
     display: flex;
     flex-direction: column;
-    background-color: #052440;
-    height: 100vh;
 }
 
 .topCont {
@@ -20,10 +18,10 @@
 
 .linkBack {
     font-family: "Madimi One", sans-serif;
-    color: #d0d0d0;
+    color: #052440;
     font-size: 25px;
     text-decoration: none;
-    border: 5px solid #d0d0d0;
+    border: 5px solid #052440;
     border-radius: 6px;
     transition: all 0.4s;
 }
@@ -40,10 +38,6 @@
     margin-right: 130px;
 }
 
-.gif {
-    width: 200px;
-}
-
 .title {
     font-family: "Madimi One", sans-serif;
     color: #f26b76;
@@ -57,7 +51,7 @@
 }
 
 .form {
-    border: 6px solid #d0d0d0;
+    background-color: #cae8fe;
     border-radius: 10px;
     width: 550px;
     text-align: center;
@@ -77,7 +71,7 @@
 
 .label {
     font-family: "Madimi One", sans-serif;
-    color: #d0d0d0;
+    color: #052440;
     font-size: 25px;
     margin: 10px;
 }
@@ -86,7 +80,7 @@
     font-family: "Madimi One", sans-serif;
     color: #052440;
     font-size: 25px;
-    border: 3px solid #d0d0d0;
+    border: 3px solid #052440;
     border-radius: 5px;
     margin: 10px;
 }
@@ -94,14 +88,16 @@
 .seasonCont {
     display: flex;
     justify-content: center;
+    margin: 10px;
 }
 
 .select {
     font-family: "Madimi One", sans-serif;
     color: #052440;
     font-size: 25px;
-    border: 3px solid #d0d0d0;
+    border: 3px solid #052440;
     border-radius: 5px;
+    width: 280px;
 }
 
 .contryCont {
@@ -114,7 +110,7 @@
     display: flex;
     flex-wrap: wrap;
     overflow: auto;
-    border: 6px solid #d0d0d0;
+    border: 6px solid #052440;
     border-radius: 10px;
     width: 450px;
     height: 100px;
@@ -124,19 +120,20 @@
     display: flex;
     align-items: center;
     font-family: "Madimi One", sans-serif;
-    color: #d0d0d0;
+    color: #ffffff;
     font-size: 20px;
-    border: 3px solid #d0d0d0;
+    background-color: #052440;
     border-radius: 5px;
     margin: 10px;
     height: 30px;
+    padding: 5px;
 }
 
 .countrySelectClose {
     font-family: "Madimi One", sans-serif;
     color: #d0d0d0;
     border: 0;
-    background-color: #052440;
+    border-radius: 50%;
     font-size: 15px;
     margin-left: 10px;
     transition: all 0.3s;
@@ -151,7 +148,7 @@
     font-family: "Madimi One", sans-serif;
     color: #052440;
     font-size: 25px;
-    border: 3px solid #d0d0d0;
+    border: 3px solid #052440;
     border-radius: 5px;
     width: 280px;
 }
@@ -165,7 +162,8 @@
     font-family: "Madimi One", sans-serif;
     color: #052440;
     font-size: 25px;
-    border: 3px solid #d0d0d0;
+    background-color: #f26b76;
+    border: #f26b76;
     border-radius: 5px;
     margin: 10px;
     transition: all 0.3s;
@@ -173,6 +171,43 @@
 }
 
 .submit:hover {
+    scale: 1.05;
+}
+
+/* ! validations */
+
+.inputError {
+    font-family: "Madimi One", sans-serif;
     color: #f26b76;
+    font-size: 25px;
     border: 3px solid #f26b76;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.selectError {
+    font-family: "Madimi One", sans-serif;
+    color: #f26b76;
+    font-size: 25px;
+    border: 3px solid #f26b76;
+    border-radius: 5px;
+    width: 280px;
+}
+
+.countrySelectContError {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    border: 6px solid #f26b76;
+    border-radius: 10px;
+    width: 450px;
+    height: 100px;
+}
+
+.errorText {
+    color: #f26b76;
+    font-family: "Madimi One", sans-serif;
+    font-size: 13px;
+    margin-top: 0;
+    height: 10px;
 }

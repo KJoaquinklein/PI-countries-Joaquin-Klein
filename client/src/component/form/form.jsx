@@ -11,6 +11,8 @@ import CountryForm from "../countryForm/CountryForm";
 
 const Form = () => {
     const {
+        formError,
+        form,
         countrySelect,
         handlerChange,
         handlerSeason,
@@ -40,26 +42,47 @@ const Form = () => {
                                 <label className={style.label} htmlFor="name">
                                     Nombre
                                 </label>
-                                <input className={style.input} type="text" name="name" onChange={handlerChange} />
+                                <input
+                                    className={formError.name ? style.inputError : style.input}
+                                    type="text"
+                                    name="name"
+                                    onChange={handlerChange}
+                                />
                             </div>
+                            <p className={style.errorText}>{formError.name}</p>
 
                             <div className={style.inputCont}>
                                 <label className={style.label} htmlFor="difficulty">
-                                    Dificultad
+                                    Dificultad (1-5)
                                 </label>
-                                <input className={style.input} type="text" name="difficulty" onChange={handlerChange} />
+                                <input
+                                    className={formError.difficulty ? style.inputError : style.input}
+                                    type="text"
+                                    name="difficulty"
+                                    onChange={handlerChange}
+                                />
                             </div>
+                            <p className={style.errorText}>{formError.difficulty}</p>
 
                             <div className={style.inputCont}>
                                 <label className={style.label} htmlFor="duration">
-                                    Duración
+                                    Duración (hs)
                                 </label>
-                                <input className={style.input} type="text" name="duration" onChange={handlerChange} />
+                                <input
+                                    className={formError.duration ? style.inputError : style.input}
+                                    type="text"
+                                    name="duration"
+                                    onChange={handlerChange}
+                                />
                             </div>
+                            <p className={style.errorText}>{formError.duration}</p>
 
                             <div className={style.seasonCont}>
                                 <p className={style.label}>Temporada</p>
-                                <select className={style.select} onChange={handlerSeason}>
+                                <select
+                                    className={!form.season ? style.selectError : style.select}
+                                    onChange={handlerSeason}
+                                >
                                     <option selected disabled>
                                         Selecciona temporada
                                     </option>

@@ -1,6 +1,6 @@
 //*-- HOOKS ----------------------------------------------
 import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 
 //*-- COMPONENTS ----------------------------------------
@@ -9,6 +9,7 @@ import ActivityCards from "../activityCard/activityCard";
 //*-- OTROS ---------------------------------------------
 import axios from "axios";
 import style from "./detail.module.css";
+import { getActivities } from "../../redux/actions";
 
 const Detail = () => {
     const { id } = useParams();
@@ -22,8 +23,12 @@ const Detail = () => {
             .catch(({ response }) => {
                 setCountry(response);
             });
-    }, []);
+    }, [id]);
 
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(getActivities());
+    }, []);
     const activities = useSelector((state) => state.activities);
 
     return (

@@ -16,8 +16,7 @@ const Landing = () => {
             <Link className={style.title} to={"/home"}>
                 Comenzar
             </Link>
-
-            <p className={style.footer}>SAP creada por Joaquín Klein</p>
+            <footer className={style.footer}>SAP creada por Joaquín Klein</footer>
         </div>
     );
 };

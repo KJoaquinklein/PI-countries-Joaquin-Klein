@@ -3,9 +3,9 @@
 .container {
     display: flex;
     flex-direction: row;
-    background-color: #052440;
     width: 100vw;
     height: 100vh;
+    position: fixed;
 }
 
 /* !-------------------------------------------------------------------- */
@@ -29,7 +29,7 @@
 .input {
     font-family: "Madimi One", sans-serif;
     font-size: 20px;
-    border: 0;
+    border: 3px solid #052440;
     border-radius: 6px;
     color: #052440;
     height: 34px;
@@ -38,7 +38,7 @@
 .buttonX {
     font-family: "Madimi One", sans-serif;
     font-size: 20px;
-    /* background-color: #052440; */
+    background-color: #052440;
     color: #d0d0d0;
     border: 0;
     height: 36px;
@@ -51,16 +51,15 @@
 
 .buttonX:hover {
     color: #f26b76;
-    background-color: #fbeaeb;
 }
 
 .formLink {
     font-size: 20px;
     text-decoration: none;
-    background-color: #3bd9c9;
     color: #052440;
     height: 25px;
     padding: 5px;
+    border: 3px solid #052440;
     border-radius: 6px;
     transition: all 0.3s;
 }
@@ -68,7 +67,7 @@
 .formLink:hover {
     scale: 1.1;
     color: #f26b76;
-    background-color: #fbeaeb;
+    border: 3px solid #f26b76;
 }
 
 /* !------------------------------------------------------------- */
@@ -82,22 +81,23 @@
     display: flex;
     flex-direction: column;
     font-family: "Madimi One", sans-serif;
-    background-color: #1c4569;
-    height: 92vh;
-    width: 220px;
+    height: 90vh;
+    width: 214px;
     margin: 2vw 0 2vw 1vw;
-    border-radius: 4px;
+    border: 3px solid #052440;
+    border-radius: 10px;
+    overflow: auto;
 }
 
 .backLink {
     font-size: 20px;
     text-decoration: none;
     text-align: center;
-    background-color: #3bd9c9;
     color: #052440;
     height: 25px;
     margin: 10px;
     padding: 5px;
+    border: 3px solid #052440;
     border-radius: 6px;
     transition: all 0.3s;
 }
@@ -105,12 +105,12 @@
 .backLink:hover {
     scale: 1.03;
     color: #f26b76;
-    background-color: #fbeaeb;
+    border: 3px solid #f26b76;
 }
 
 .title {
     font-size: 30px;
-    color: #3bd9c9;
+    color: #f26b76;
     text-align: center;
     height: 30px;
 }
@@ -119,8 +119,8 @@
     display: flex;
     flex-direction: column;
     font-size: 20px;
-    background-color: #052440;
-    color: #d0d0d0;
+    background-color: #cae8fe;
+    color: #052440;
     margin: 10px 10px 15px 10px;
     border-radius: 6px;
 }
@@ -128,7 +128,7 @@
 .optionTitle {
     height: 0px;
     margin-left: 10px;
-    color: #3bd9c9;
+    color: #f26b76;
 }
 
 .subtitle {
@@ -140,8 +140,8 @@
     font-family: "Madimi One", sans-serif;
     font-size: 20px;
     color: #052440;
-    width: 180px;
-    max-width: 180px;
+    width: 170px;
+    max-width: 170px;
     margin: 5px 10px 15px 10px;
     border-radius: 4px;
     transition: all 0.3s;
@@ -156,7 +156,7 @@
     font-family: "Madimi One", sans-serif;
     font-size: 20px;
     color: #052440;
-    width: 180px;
+    width: 170px;
     margin: 15px 10px 10px 10px;
     border-radius: 4px;
     cursor: pointer;
@@ -212,15 +212,27 @@
     justify-content: center;
 }
 
+.numPage {
+    font-family: "Madimi One", sans-serif;
+    font-size: 25px;
+    margin: 0 10px 0 10px;
+    color: #052440;
+}
+
 .buttonPag {
     font-family: "Madimi One", sans-serif;
     font-size: 25px;
     margin: 0 10px 0 10px;
-    background-color: #3bd9c9;
+    background-color: #cae8fe;
     color: #052440;
     border-radius: 6px;
-    border: #3bd9c9;
+    border: #cae8fe;
     cursor: pointer;
+    transition: all 0.3s;
+}
+
+.buttonPag:hover {
+    background-color: #36b6fa;
 }
 
 /* !---------------------------------------------- */
@@ -238,9 +250,39 @@
     font-family: "Madimi One", sans-serif;
     text-align: center;
     font-size: 30px;
-    color: #f2f2f2;
+    color: #052440;
 }
 
 .errorImg {
     width: 250px;
+}
+
+/* ?------------------ */
+
+@media (max-width: 1350px) {
+    .cardsCont {
+        width: 78vw;
+    }
+
+    .containerTop {
+        width: 78vw;
+    }
+}
+
+@media (max-width: 900px) {
+    .searchBar {
+        margin: 0 70px 0 10px;
+    }
+}
+
+@media (max-width: 800px) {
+    .containerTop {
+        flex-direction: column;
+        justify-content: center;
+        height: 200px;
+    }
+
+    .searchBar {
+        margin: 10px 0 0 0;
+    }
 }

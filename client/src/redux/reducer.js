@@ -2,6 +2,7 @@ const initialState = {
     countries: [],
     countriesCopy: [],
     activities: [],
+    filterContinent: "",
 };
 
 const reducer = (state = initialState, action) => {
@@ -19,6 +20,7 @@ const reducer = (state = initialState, action) => {
                 return {
                     ...state,
                     countriesCopy: [...state.countries].filter((country) => country.continent.includes(action.payload)),
+                    filterContinent: action.payload,
                 };
             }
         case "GET_COUNTRY_BY_NAME":

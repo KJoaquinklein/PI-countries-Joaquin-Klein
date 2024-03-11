@@ -14,7 +14,7 @@ import style from "./home.module.css";
 
 const Home = () => {
     const countriesCopy = useSelector((state) => state.countriesCopy);
-    const { items, handlerNext, handlerPrev, handlerOrderAlpha, handlerOrderPop, validationOrder } =
+    const { items, handlerNext, handlerPrev, handlerOrderAlpha, handlerOrderPop, validationOrder, pageNum } =
         usePaginated(countriesCopy);
     const { handlerActivities, handlerFilter } = useFilter();
     const { searchState, handlerChange, handlerClick } = useSearch();
@@ -88,6 +88,7 @@ const Home = () => {
                             <button className={style.buttonPag} onClick={handlerPrev}>
                                 {"<<<"}
                             </button>
+                            <p className={style.numPage}>{pageNum + 1}</p>
                             <button className={style.buttonPag} onClick={handlerNext}>
                                 {">>>"}
                             </button>

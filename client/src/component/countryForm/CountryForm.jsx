@@ -7,7 +7,10 @@ const CountryForm = (props) => {
         <div className={style.contryCont}>
             <div className={style.inputCountry}>
                 <p className={style.label}>Paises</p>
-                <select className={style.selectCountry} onChange={handlerCountries}>
+                <select
+                    className={!countrySelect.length ? style.selectError : style.selectCountry}
+                    onChange={handlerCountries}
+                >
                     <option selected disabled>
                         Selecciona país
                     </option>
@@ -18,7 +21,7 @@ const CountryForm = (props) => {
                     ))}
                 </select>
             </div>
-            <div className={style.countrySelectCont}>
+            <div className={!countrySelect.length ? style.countrySelectContError : style.countrySelectCont}>
                 {countrySelect.map((country) => (
                     <div className={style.countryCard} key={country}>
                         <p className={style.countrySelectName}>{country}</p>

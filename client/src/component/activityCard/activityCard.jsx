@@ -16,7 +16,7 @@ const ActivityCards = (props) => {
                             </div>
                             <div>
                                 <p className={style.text}>Dificultad: {act.difficulty}</p>
-                                <p className={style.text}>Duración: {act.duration}</p>
+                                <p className={style.text}>Duración: {act.duration}hs</p>
                                 <p className={style.text}>Temporada: {act.season}</p>
                             </div>
                         </div>

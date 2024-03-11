@@ -73,6 +73,7 @@ const usePaginated = (countries) => {
         handlerOrderAlpha,
         handlerOrderPop,
         validationOrder,
+        pageNum,
     };
 };
 
