@@ -64,6 +64,7 @@ const Home = () => {
                             handlerPrev={handlerPrev}
                             handlerNext={handlerNext}
                             pageNum={pageNum}
+                            countriesCopy={countriesCopy}
                         />
                     </div>
                 </div>

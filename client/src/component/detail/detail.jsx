@@ -73,7 +73,7 @@ const Detail = () => {
 
                             <div className={style.textIconCont}>
                                 <img className={style.icon} src="/src/assets/area.png" />
-                                <p>{country.area}</p>
+                                <p>{country.area} Km²</p>
                             </div>
                         </div>
                     </div>

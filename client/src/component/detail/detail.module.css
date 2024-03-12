@@ -119,6 +119,10 @@
     border-radius: 6px;
     min-width: 200px;
     height: 160px;
+    transition: all 0.3s;
+}
+.card:hover {
+    scale: 1.04;
 }
 
 .nameAct {

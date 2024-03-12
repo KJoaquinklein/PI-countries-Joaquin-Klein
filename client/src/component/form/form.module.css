@@ -21,7 +21,7 @@
     color: #052440;
     font-size: 25px;
     text-decoration: none;
-    border: 5px solid #052440;
+    border: 3px solid #052440;
     border-radius: 6px;
     transition: all 0.4s;
 }
@@ -29,7 +29,7 @@
 .linkBack:hover {
     scale: 1.03;
     color: #f26b76;
-    border: 5px solid #f26b76;
+    border: 3px solid #f26b76;
 }
 
 .titleCont {

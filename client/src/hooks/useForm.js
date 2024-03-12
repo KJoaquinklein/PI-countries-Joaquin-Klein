@@ -98,6 +98,9 @@ const useForm = (validationForm) => {
             axios.post("http://localhost:3001/activities", activity).then(({ data }) => {
                 window.alert(data);
             });
+            setForm({ name: "", difficulty: 0, duration: 0, season: "", countryId: [] });
+            formTag.reset();
+            setCountrySelect([]);
         }
     };
 

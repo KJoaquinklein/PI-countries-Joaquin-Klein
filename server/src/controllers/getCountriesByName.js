@@ -11,7 +11,7 @@ const getCountriesByName = async (req, res) => {
                 },
             },
         });
-        if (!findeByName) {
+        if (!findeByName.length) {
             return res.status(404).send(`Country not found: ${name}`);
         }
         res.status(200).json(findeByName);

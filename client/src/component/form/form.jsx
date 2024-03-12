@@ -35,7 +35,7 @@ const Form = () => {
                 </div>
             </div>
             <div className={style.formCont}>
-                <form className={style.form}>
+                <form id="formTag" className={style.form}>
                     <div className={style.formInputs}>
                         <div>
                             <div className={style.inputCont}>

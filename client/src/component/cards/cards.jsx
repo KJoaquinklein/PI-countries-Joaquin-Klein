@@ -2,7 +2,14 @@ import style from "./cards.module.css";
 import Card from "../card/card";
 
 const Cards = (props) => {
-    const { items, searchState, handlerPrev, handlerNext, pageNum } = props;
+    const { items, searchState, handlerPrev, handlerNext, pageNum, countriesCopy } = props;
+
+    let lastPage;
+    if ((pageNum + 1) * 10 >= countriesCopy.length) {
+        lastPage = true;
+    } else {
+        lastPage = false;
+    }
 
     return (
         <>
@@ -21,11 +28,11 @@ const Cards = (props) => {
                 )}
             </div>
             <div className={style.paginatedCont}>
-                <button className={style.buttonPag} onClick={handlerPrev}>
+                <button className={!pageNum ? style.buttonPagBlock : style.buttonPag} onClick={handlerPrev}>
                     {"<<<"}
                 </button>
                 <p className={style.numPage}>{pageNum + 1}</p>
-                <button className={style.buttonPag} onClick={handlerNext}>
+                <button className={lastPage ? style.buttonPagBlock : style.buttonPag} onClick={handlerNext}>
                     {">>>"}
                 </button>
             </div>

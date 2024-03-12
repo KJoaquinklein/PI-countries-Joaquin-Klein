@@ -4,7 +4,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 10px;
     width: 83.2vw;
     height: 75vh;
     margin: 0 1vw 0 1vw;
@@ -51,6 +50,18 @@
 
 .buttonPag:hover {
     background-color: #36b6fa;
+}
+
+.buttonPagBlock {
+    font-family: "Madimi One", sans-serif;
+    color: #444e57;
+    font-size: 25px;
+    background-color: #dfdfdf;
+    border: #dfdfdf;
+    border-radius: 6px;
+    margin: 0 10px 0 10px;
+    transition: all 0.3s;
+    cursor: not-allowed;
 }
 
 .error {
