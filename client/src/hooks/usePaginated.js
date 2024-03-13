@@ -8,8 +8,16 @@ const usePaginated = (countries) => {
     const startIndex = pageNum * itemsPage;
     const endIndex = startIndex + itemsPage;
 
-    const { orderAlpha, setOrderAlpha, orderPop, setOrderPop, sortAlphaCounties, sortPopCounties } =
-        useSorted(countries);
+    const {
+        orderAlpha,
+        setOrderAlpha,
+        orderPop,
+        setOrderPop,
+        sortAlphaCounties,
+        sortPopCounties,
+        handlerOrderAlpha,
+        handlerOrderPop,
+    } = useSorted(countries, setPageNum);
 
     let orderCountries = [...countries];
     let validationOrder;
@@ -38,29 +46,6 @@ const usePaginated = (countries) => {
         const prevPage = pageNum - 1;
         if (prevPage >= 0) {
             setPageNum(prevPage);
-        }
-    };
-
-    const handlerOrderAlpha = () => {
-        if (orderAlpha) {
-            setOrderAlpha(false);
-            setPageNum(0);
-        } else {
-            setOrderAlpha(true);
-            setPageNum(0);
-        }
-    };
-
-    const handlerOrderPop = () => {
-        if (orderPop === 0) {
-            setOrderPop(1);
-            setPageNum(0);
-        } else if (orderPop === 1) {
-            setOrderPop(2);
-            setPageNum(0);
-        } else if (orderPop === 2) {
-            setOrderPop(0);
-            setPageNum(0);
         }
     };
 

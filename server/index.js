@@ -7,11 +7,7 @@ const PORT = 3001;
 conn.sync({ force: true })
     .then(() => {
         server.listen(PORT, () => {
-            console.log(`Server listening on port ${PORT}`);
-            // const response = await axios("http://localhost:5000/countries");
-            // if (response) {
-            //     countries = response;
-            // }
+            console.log("Server listen on port 3001");
             getCountriesFromApi();
         });
     })
@@ -25,8 +21,6 @@ const getCountriesFromApi = async () => {
         });
     }
 };
-
-//!VER MANEJO DE ERRORES
 
 const createCountyInTable = async (country) => {
     try {

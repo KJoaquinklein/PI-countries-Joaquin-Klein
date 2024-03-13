@@ -100,64 +100,6 @@
     width: 280px;
 }
 
-.contryCont {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.countrySelectCont {
-    display: flex;
-    flex-wrap: wrap;
-    overflow: auto;
-    border: 6px solid #052440;
-    border-radius: 10px;
-    width: 450px;
-    height: 100px;
-}
-
-.countryCard {
-    display: flex;
-    align-items: center;
-    font-family: "Madimi One", sans-serif;
-    color: #ffffff;
-    font-size: 20px;
-    background-color: #052440;
-    border-radius: 5px;
-    margin: 10px;
-    height: 30px;
-    padding: 5px;
-}
-
-.countrySelectClose {
-    font-family: "Madimi One", sans-serif;
-    color: #d0d0d0;
-    border: 0;
-    border-radius: 50%;
-    font-size: 15px;
-    margin-left: 10px;
-    transition: all 0.3s;
-    cursor: pointer;
-}
-
-.countrySelectClose:hover {
-    color: #f26b76;
-}
-
-.selectCountry {
-    font-family: "Madimi One", sans-serif;
-    color: #052440;
-    font-size: 25px;
-    border: 3px solid #052440;
-    border-radius: 5px;
-    width: 280px;
-}
-
-.inputCountry {
-    display: flex;
-    margin: 10px;
-}
-
 .submit {
     font-family: "Madimi One", sans-serif;
     color: #052440;
@@ -204,16 +146,6 @@
     border: 3px solid #f26b76;
     border-radius: 5px;
     width: 280px;
-}
-
-.countrySelectContError {
-    display: flex;
-    flex-wrap: wrap;
-    overflow: auto;
-    border: 6px solid #f26b76;
-    border-radius: 10px;
-    width: 450px;
-    height: 100px;
 }
 
 .errorText {

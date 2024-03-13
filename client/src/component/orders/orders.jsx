@@ -1,7 +1,15 @@
 import style from "./orders.module.css";
+import { useDispatch } from "react-redux";
+import { getFilterKm } from "../../redux/actions";
 
 const Orders = (props) => {
     const { validationOrder, handlerOrderAlpha, handlerOrderPop } = props;
+
+    //900.000
+    const dispatch = useDispatch();
+    const handlerClick = () => {
+        dispatch(getFilterKm());
+    };
 
     return (
         <>
@@ -18,6 +26,8 @@ const Orders = (props) => {
             >
                 Población
             </button>
+
+            <button onClick={handlerClick}>Filtrar por Km</button>
         </>
     );
 };

@@ -1,0 +1,43 @@
+.cardsCont {
+    display: flex;
+    width: 91vw;
+    height: 200px;
+    margin: 0 70px 0 70px;
+    border-radius: 10px;
+    overflow-x: auto;
+}
+
+.cardsCont::-webkit-scrollbar {
+    height: 15px;
+}
+
+.cardsCont::-webkit-scrollbar-thumb {
+    background-color: #36b6fa;
+    border-radius: 6px;
+}
+
+.card {
+    background-color: #cae8fe;
+    margin: 10px;
+    border-radius: 6px;
+    min-width: 200px;
+    height: 160px;
+    transition: all 0.3s;
+}
+.card:hover {
+    scale: 1.04;
+}
+
+.nameAct {
+    font-family: "Madimi One", sans-serif;
+    color: #0f304d;
+    font-size: 25px;
+    margin: 10px;
+}
+
+.text {
+    font-family: "Madimi One", sans-serif;
+    color: #052440;
+    font-size: 15px;
+    margin: 0 10px 10px 10px;
+}

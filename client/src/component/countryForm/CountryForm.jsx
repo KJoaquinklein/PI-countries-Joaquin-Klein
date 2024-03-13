@@ -1,4 +1,4 @@
-import style from "../form/form.module.css";
+import style from "./CountryForm.module.css";
 
 const CountryForm = (props) => {
     const { countrySelect, countriesSort, handlerCloseTag, handlerCountries } = props;

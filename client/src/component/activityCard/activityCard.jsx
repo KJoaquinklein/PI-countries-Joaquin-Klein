@@ -1,4 +1,4 @@
-import style from "../detail/detail.module.css";
+import style from "./activityCard.module.css";
 
 const ActivityCards = (props) => {
     const { activities, id } = props;

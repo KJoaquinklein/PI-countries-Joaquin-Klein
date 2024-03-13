@@ -55,3 +55,9 @@ export const getFilterActivities = (countriesAct) => {
         payload: countriesAct,
     };
 };
+
+export const getFilterKm = () => {
+    return {
+        type: "FILTER_KM",
+    };
+};
